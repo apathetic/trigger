@@ -18,7 +18,7 @@ var Trigger = (function () {
       return false;
     }
 
-    [].prototype.forEach.call(animatables, function (element) {
+    Array.prototype.forEach.call(animatables, function (element) {
       var position;
 
       function check() {
@@ -26,7 +26,8 @@ var Trigger = (function () {
         position += delay;
 
         if (position < window.innerHeight) {
-          $(element).addClass('animated');
+          // $(element).addClass('animated');
+          element.classList.add('animated');
 
           window.removeEventListener('scroll', check);
           window.removeEventListener('resize', check);

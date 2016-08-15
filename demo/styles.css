@@ -1,71 +1,46 @@
-.modal {
-	/*display: none;*/
-	background: rgba(0,0,0, 0.75);
-	position: fixed;
-	top:0;
-	bottom: 0;
-	left: 0;
-	right:0;
-	height: 0;
-	overflow: hidden;
+.animatable {
+  opacity: 0;
+  transition-property: opacity, transform;
+  transition-duration: 700ms;
+  transform: translate3d(0, 20px, 0);
+}
+.animatable.animated {
+  opacity: 1;
+  transform: translate3d(0, 0, 0);
 }
 
-.modal .content {
-	top: 20vh;
-	left: 25%;
-	width: 50%;
-
-	max-height: 60vh;
-	overflow: auto;
-
-	padding: 20px;
-	background: #fff;
-	border-radius: 4px;
-	color: #333;
-
-	transform: translateY(-30px) scale(1.1);
-	opacity: 0;
-
-	transition: all 0.4s;
-    transition-delay: 0.2s;
+img {
+  max-width: 80%;
+  display: block;
+  margin: 1em auto;
 }
 
-.modal .close {
-	position: absolute;
-	top: 10px;
-	right: 10px;
-	background: none;
-	font-size: 48px;
-  font-family: helvetica;
-	z-index: 900;
-	cursor: pointer;
-	color: #ccc;
+blockquote {
+  border-left: 5px #ddd solid;
+  padding-left: 2em;
+  margin: 2em;
+  font-size: 1.6em;
+}
+blockquote span {
+  font-size: 0.5em;
+  color: #999;
+  font-style: italic;
 }
 
-.modal .close::after {
-	content: "\00d7";
-}
-
-.modal.active {
-	/*display: block;*/
-	height: 100%;
-	z-index: 1000;
-}
-
-.modal.active .content {
-	transform: translateY(0) scale(1);
-	opacity: 1;
-}
-
-.is-modal {
-	overflow: hidden;
+blockquote.animatable p,
+blockquote.animatable cite {
+  opacity: 0;
+  transition-property: opacity, transform;
+  transition-duration: 700ms;
+  transform: translate3d(40px, 0, 0);
 }
 
 
-@media(max-width: 768px) {
-	.modal .content {
-		top: 5vh;
-		left: 10%;
-		width: 80%;
-	}
+blockquote.animatable.animated p,
+blockquote.animatable.animated cite {
+  opacity: 1;
+  transform: translate3d(0, 0, 0);
+}
+blockquote.animatable.animated cite {
+  transition-delay: 450ms;
 }

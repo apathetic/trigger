@@ -10,19 +10,17 @@ const isTouchDevice = ('ontouchstart' in window) || window.DocumentTouch && docu
  * @return {void}
  */
 export default function(animatables, delay=0) {
-  if (!animatables.length|| isTouchDevice) {
+  if (!animatables.length || isTouchDevice) {
     return false;
   }
 
-  [].prototype.forEach.call(animatables, (element) => {
-    var position;
-
+  Array.prototype.forEach.call(animatables, (element) => {
     function check() {
-      position = element.getBoundingClientRect().top;
+      let position = element.getBoundingClientRect().top;
       position += delay;
 
       if (position < window.innerHeight) {
-        $(element).addClass('animated');
+        element.classList.add('animated');
 
         window.removeEventListener('scroll', check);
         window.removeEventListener('resize', check);
@@ -34,5 +32,4 @@ export default function(animatables, delay=0) {
 
     check();
   });
-
 }

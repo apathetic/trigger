@@ -12,8 +12,8 @@
     "url": "https://github.com/apathetic/trigger.git"
   },
   "keywords": [
-    "modal",
-    "overlay"
+    "js",
+    "scroll"
   ],
   "scripts": {
     "start": "http-server ./ -p 8080 -d",
