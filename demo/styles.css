@@ -9,10 +9,20 @@
   transform: translate3d(0, 0, 0);
 }
 
-img {
+#demo p {
+  margin: 1em 0 2em;
+}
+
+#demo img {
   max-width: 80%;
   display: block;
   margin: 1em auto;
+}
+
+#demo img.small {
+  width: 30%;
+  float: left;
+  padding: 0 2%;
 }
 
 blockquote {
