@@ -2,7 +2,7 @@
   "name": "@apatheticwes/trigger",
   "author": "wes hatch",
   "license": "MIT",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "A simple trigger on page scroll",
   "main": "./dist/trigger.cjs.js",
   "broswer": "./dist/trigger.min.js",
