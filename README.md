@@ -43,7 +43,8 @@ A server will spin up at ```http://localhost:8080```, where you may play with th
 
 Please see the _test / demo_ directory
 
-## Release History
+## TODO
+Add lazy-loading as a possible callback.
 
-### 0.1
-* first release
+## License
+MIT
